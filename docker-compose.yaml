@@ -1,0 +1,12 @@
+version: "3.7"
+services:
+    nest:
+        container_name: share_bookmark
+        build:
+            context: ./
+        restart: always
+        command: npm run start:dev
+        ports:
+            - ${PORT}:${PORT}
+        env_file:
+            - .env
